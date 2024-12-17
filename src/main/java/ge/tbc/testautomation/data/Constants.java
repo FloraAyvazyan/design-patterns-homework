@@ -2,12 +2,15 @@ package ge.tbc.testautomation.data;
 
 public class Constants {
     public static final String
-
             PRIORITY_SUPPORT = "Priority Support",
             KENDOREACT_PRICE = "999",
             KENDOUI_PRICE = "1,149",
             CHECKBOX_TYPE = "checkbox",
             SELECTED_TEXT = "Please select an option",
+            COUNTY = "Albania",
+            COMPANY = "TBC",
+            PHONE = "795665456",
+            ZIP_CODE = "0222",
             OPTION2 = "Option 2",
             FULL_NAME = "Flora Ayvazyan",
             EMAIL = "plora.ayvazyan053@hum.tsu.edu.ge",
@@ -16,6 +19,33 @@ public class Constants {
             VALIDATE_NAME = "Name:Flora Ayvazyan",
             VALIDATE_EMAIL = "Email:plora.ayvazyan053@hum.tsu.edu.ge",
             VALIDATE_CURRENT_ADDRESS = "Current Address :Georgia, Tbilisi",
-            VALIDATE_PERMANENT_ADDRESS = "Permananet Address :Tsalka";
+            VALIDATE_PERMANENT_ADDRESS = "Permananet Address :Tsalka",
+            MOCKING_SOLUTION_FOR_REPAID_UNIT_TESTING = "Mocking solution for rapid unit testing",
+            ISSUE_ESCALATION = "Issue escalation",
+            END_TO_END_REPORT_MANAGEMENT_SOLUTION = "End-to-end report management solution",
+            TELERIK_TEST_STUDIO_DEV_EDITION = "Telerik Test Studio Dev Edition",
+            KENDO_UI_FOR_JQUERY = "Kendo UI for jQuery",
+            DEVCRAFT_UI = "DevCraft UI",
+            DEVCRAFT_ULTIMATE = "DevCraft Ultimate",
+            DEVCRAFT_COMPLETE = "DevCraft Complete",
+            TELERIK_REPORTING = "Telerik Reporting",
+            ACCESS_TO_ON_DEMAND_VIDEOS = "Access to on-demand videos",
+            PUBLISHER = "O'Reilly Media",
+            TITLE = "Javascript",
+            GIT_GUIDE = "Git Pocket Guide",
+            KENDO_UI_LIST = "Kendo Ui",
+            UI_FOR_VUE_VALUES = "UI for Vue demos",
+            TITLE_ATTRIBUTE = "title",
+            MICROSOFT_DOWNLOAD = "Get It from Microsoft",
+            APPSTORE_DOWNLOAD = "Download on the App Store",
+            GOOGLEPLAY_DOWNLOAD = "Get it on Google Play",
+            VALIDATE_PRICE = "$1,699.00",
+            CHOOSE_YEAR = "2",
+            TERM_PRICE = "$781.08",
+            LICENSE_VALUE = "Licenses",
+            LICENSE_NUMBER = "$1,699.00",
+            HOVER_LABEL = "Maintenance & Support",
+            HOVER_VALUE = "- $135.84";
+
 
 }
