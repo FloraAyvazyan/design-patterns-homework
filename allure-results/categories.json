@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Product defects",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Successful Tests",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Skipped Tests",
+    "matchedStatuses": ["skipped"]
+  },
+  {
+    "name": "Outdated tests",
+    "matchedStatuses": ["broken"],
+    "traceRegex": ".*FileNotFoundException.*"
+  }
+]
