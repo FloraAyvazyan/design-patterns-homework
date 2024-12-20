@@ -5,11 +5,13 @@ import ge.tbc.testautomation.steps.HerokuappSteps.DropDownSteps;
 import ge.tbc.testautomation.steps.TelerikSteps.IndividualProductsSteps;
 import ge.tbc.testautomation.steps.TelerikSteps.PricingPageSteps;
 import ge.tbc.testautomation.steps.TelerikSteps.ProductBundlesSteps;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import java.util.List;
 import static com.codeborne.selenide.Selenide.open;
 import static ge.tbc.testautomation.data.Constants.*;
 
+@Epic("Pricing and Product Bundles Testing")
 @Test(groups = {"Selenide 1"})
 public class SelenideTests extends ConfigTest{
     PricingPageSteps navigateToSteps = new PricingPageSteps();
@@ -22,10 +24,15 @@ public class SelenideTests extends ConfigTest{
 
 
     @Test(priority = 5)
+    @Feature("Product Bundles")
+    @Story("Validate Bundle Offers Availability")
+    @Description("This test checks the availability of different product bundles based" +
+            " on the selected solution and validates that the correct bundles are visible under different conditions.")
+    @Severity(SeverityLevel.BLOCKER)
     public void validateBundleOffers() {
         open("https://www.telerik.com/support/demos");
         navigateToSteps.goToPricingPage();
-        productBundlesSteps
+        productBundlesSteps//
                 .isNotSupportedOnCollection(MOCKING_SOLUTION_FOR_REPAID_UNIT_TESTING, productBundlesPage.DevCraftUI)
                 .isSupportedOnCollection(END_TO_END_REPORT_MANAGEMENT_SOLUTION, productBundlesPage.DevCraftUltimate)
                 .isNotSupportedOnCollection(END_TO_END_REPORT_MANAGEMENT_SOLUTION, productBundlesPage.DevCraftUI)
@@ -52,6 +59,11 @@ public class SelenideTests extends ConfigTest{
     }
 
     @Test(priority = 4)
+    @Feature("Individual Product Offers")
+    @Story("Validate Individual Product Offers Visibility")
+    @Description("This test ensures that individual product offers are visible, " +
+            "that hover interactions work as expected, and that pricing information is correct for each product.")
+    @Severity(SeverityLevel.MINOR)
     public void validateIndividualOffers(){
         open("https://www.telerik.com/support/demos");
         navigateToSteps.goToPricingPage();
@@ -71,7 +83,13 @@ public class SelenideTests extends ConfigTest{
     }
 
 
+
     @Test(groups = {"CheckBoxes-FrontEnd"}, priority = 2)
+    @Feature("Checkbox Interaction")
+    @Story("Test Checkbox Selection and Type")
+    @Description("This test verifies that checkboxes can be " +
+            "selected correctly and that their types are as expected.")
+    @Severity(SeverityLevel.NORMAL)
     public void checkBoxTest() {
         open("http://the-internet.herokuapp.com/checkboxes");
         checkBoxSteps
@@ -82,6 +100,11 @@ public class SelenideTests extends ConfigTest{
 
 
     @Test(groups = {"dropDown-FrontEnd"}, priority = 3)
+    @Feature("Dropdown Interaction")
+    @Story("Test Dropdown Option Selection")
+    @Description("This test validates the selection and display of dropdown options." +
+            " It ensures that the dropdown functionality is working and the selected options are reflected correctly.")
+    @Severity(SeverityLevel.TRIVIAL)
     public void dropDownTest(){
         open("http://the-internet.herokuapp.com/dropdown");
         dropDownSteps
@@ -91,7 +114,13 @@ public class SelenideTests extends ConfigTest{
 
     }
 
+
     @Test(priority = 6)
+    @Feature("TextBox Interaction")
+    @Story("Test Textbox Inputs and Validation")
+    @Description("This test verifies that the form fields (name, email, addresses) are filled correctly and validated once submitted. " +
+            "It checks the visibility of the submitted data and ensures proper functionality.")
+    @Severity(SeverityLevel.CRITICAL)
     public void collectionsTest(){
         open("https://demoqa.com/text-box");
         List<String> result = List.of(

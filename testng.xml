@@ -4,9 +4,7 @@
 
 <suite name="TestSuite" thread-count="1" parallel="tests">
     <listeners>
-        <listener class-name="ge.tbc.testautomation.Listeners.ReportListener" />
-        <listener class-name="ge.tbc.testautomation.Listeners.SuiteListener" />
-        <listener class-name="ge.tbc.testautomation.Listeners.TestListener" />
+        <listener class-name="ge.tbc.testautomation.Listeners.CustomTestListener"/>
 
     </listeners>
 
